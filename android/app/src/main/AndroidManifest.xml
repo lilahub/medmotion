@@ -3,6 +3,7 @@
    <application
         android:label="medmotion"
         android:icon="@mipmap/ic_launcher">
+         
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -38,4 +39,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
