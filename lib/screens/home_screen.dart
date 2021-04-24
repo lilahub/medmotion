@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:medmotion/screens/perguntas_screen.dart';
 import 'package:medmotion/screens/receitas.dart';
 
+import 'inicio_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
