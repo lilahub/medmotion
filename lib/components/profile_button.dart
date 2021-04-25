@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class ProfileButton extends StatelessWidget {
   final text;
   final padding;
-  const ProfileButton({Key key, this.padding, this.text}) : super(key: key);
+  final icon;
+  const ProfileButton({Key key, this.padding, this.text, this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class ProfileButton extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(right: 10),
                     child: Icon(
-                      Icons.settings,
+                      icon,
                       color: Color(0xFF1E53BD),
                     ),
                   ),
