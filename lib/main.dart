@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medmotion/screens/forgot_passw.dart';
 import 'package:medmotion/screens/home_screen.dart';
-import 'package:medmotion/screens/inicio_screen.dart';
+import 'package:medmotion/screens/index_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MedmotionApp());
 }
 
-class MyApp extends StatelessWidget {
+class MedmotionApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Inicio(),
+      home: HomeScreen(),
     );
   }
 }

@@ -46,8 +46,8 @@ class LoginScreen extends StatelessWidget {
               ),
               PrimaryButton(
                 text: "Entrar",
-                nextScreen: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => HomeScreen())),
+                nextScreen: () => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (_) => HomeScreen())),
                 widthButton: sizeWidth(70),
               )
             ],

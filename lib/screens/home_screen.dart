@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:medmotion/screens/profile_screen.dart';
 
-import 'package:medmotion/screens/perguntas_screen.dart';
-import 'package:medmotion/screens/receitas.dart';
+import 'package:medmotion/screens/questions_screen.dart';
+import 'package:medmotion/screens/prescription_screen.dart';
 
-import 'inicio_screen.dart';
+import 'index_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Perguntas(),
     NewPageScreen("Conversar"),
     Receitas(),
-    NewPageScreen("Perfil"),
+    ProfileScreen(),
   ];
 
   setIndex(int index) {

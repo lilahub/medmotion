@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medmotion/components/primary_button.dart';
 import 'package:medmotion/screens/login_screen.dart';
-
-import 'cadastro_screen.dart';
+import 'sign_up_screen.dart';
 
 class Inicio extends StatelessWidget {
   @override
