@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medmotion/components/custom_textfield.dart';
-import 'package:medmotion/components/primary_button.dart';
 import 'package:medmotion/components/profile_button.dart';
-import 'package:medmotion/screens/login_screen.dart';
-import 'package:medmotion/screens/sign_up_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -29,14 +25,17 @@ class ProfileScreen extends StatelessWidget {
               padding: padding,
             ),
             ProfileButton(
+              icon: Icons.message_sharp,
               text: "Compartilhe sua experiência",
               padding: padding,
             ),
             ProfileButton(
+              icon: Icons.help,
               text: "Central de ajuda",
               padding: padding,
             ),
             ProfileButton(
+              icon: Icons.person_pin,
               text: "Sobre nós",
               padding: padding,
             )

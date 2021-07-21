@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class PrimaryButton extends StatelessWidget {
+class PrescripButton extends StatelessWidget {
   final text;
   final widthButton;
   final Function nextScreen;
-  PrimaryButton({this.text, this.widthButton = 100.0, this.nextScreen});
+  PrescripButton({this.text, this.widthButton = 100.0, this.nextScreen});
 
   @override
   Widget build(BuildContext context) {

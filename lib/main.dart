@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:medmotion/screens/forgot_passw.dart';
 import 'package:medmotion/screens/home_screen.dart';
-import 'package:medmotion/screens/index_screen.dart';
 
 void main() {
   runApp(MedmotionApp());
@@ -18,7 +15,7 @@ class MedmotionApp extends StatelessWidget {
       theme: ThemeData(
         accentColor: Colors.blue,
         primarySwatch: Colors.blue,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+        fontFamily: 'Poppins-Regular', //GoogleFonts.poppins().fontFamily,
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             backgroundColor: Colors.teal[300],

@@ -22,7 +22,7 @@ class Perguntas extends StatelessWidget {
                   child: Text(
                     "Clique nas frases para assistir os vídeos em Libras",
                     style: TextStyle(
-                      color: Colors.blue[700],
+                      color: Color(0xFF1E53BD),
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -33,7 +33,7 @@ class Perguntas extends StatelessWidget {
               Text(
                 "Sintomas",
                 style: TextStyle(
-                  color: Colors.blue[700],
+                  color: Color(0xFF1E53BD),
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -87,7 +87,7 @@ class Perguntas extends StatelessWidget {
                 child: Text(
                   "Medicamentos",
                   style: TextStyle(
-                    color: Colors.blue[700],
+                    color: Color(0xFF1E53BD),
                     fontWeight: FontWeight.bold,
                   ),
                 ),

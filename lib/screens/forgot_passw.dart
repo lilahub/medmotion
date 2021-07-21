@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:medmotion/components/custom_textfield.dart';
 import 'package:medmotion/components/primary_button.dart';
 import 'package:medmotion/screens/login_screen.dart';
-import 'package:medmotion/screens/sign_up_screen.dart';
 
 class ForgotPassword extends StatelessWidget {
   @override

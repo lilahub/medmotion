@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medmotion/screens/profile_screen.dart';
-
 import 'package:medmotion/screens/questions_screen.dart';
 import 'package:medmotion/screens/prescription_screen.dart';
-
-import 'index_screen.dart';
+import 'package:medmotion/screens/talk.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -15,7 +13,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   final List<Widget> telas = [
     Perguntas(),
-    NewPageScreen("Conversar"),
+    Talk(),
+    //NewPageScreen("Conversar"),
+    // NewPrescription(),
     Receitas(),
     ProfileScreen(),
   ];
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: setIndex,
         showUnselectedLabels: true,
         selectedItemColor: Colors.teal,
-        unselectedItemColor: Colors.blue[700],
+        unselectedItemColor: Color(0xFF1E53BD),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.help),
