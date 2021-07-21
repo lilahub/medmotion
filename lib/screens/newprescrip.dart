@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pdfLib;
 import 'package:share_extend/share_extend.dart';
 import 'package:path_provider/path_provider.dart';
@@ -123,34 +124,71 @@ class _NewPrescriptionState extends State<NewPrescription> {
   _creatPdf(context, hospital, medico, crm, paciente, remedio, dias, manha,
       tarde, noite) async {
     final pdfLib.Document pdf = pdfLib.Document(deflate: zlib.encode);
-
-    pdf.addPage(pdfLib.MultiPage(
+    var hosp = await rootBundle.loadString('assets/hospital.svg');
+    pdf.addPage(
+      pdfLib.MultiPage(
         build: (context) => [
-              pdfLib.Table.fromTextArray(data: <List<String>>[
-                <String>[
-                  'Hospital',
-                  'Médico(a)',
-                  'CRM',
-                  'Paciente',
-                  'Remédio',
-                  'Dias',
-                  'Manhã',
-                  'Tarde',
-                  'Noite'
-                ],
-                [
-                  hospital,
-                  medico,
-                  crm,
-                  paciente,
-                  remedio,
-                  dias,
-                  manha,
-                  tarde,
-                  noite
-                ]
-              ])
-            ]));
+          pdfLib.Row(
+            children: [
+              pdfLib.SvgImage(
+                svg: hosp,
+                height: 20,
+                width: 20,
+              ),
+              pdfLib.Text(hospital),
+            ],
+          ),
+          pdfLib.Row(
+            children: [
+              pdfLib.SvgImage(
+                svg: hosp,
+                height: 20,
+                width: 20,
+              ),
+              pdfLib.Text(
+                medico,
+              ),
+            ],
+          ),
+          pdfLib.Row(
+            children: [
+              pdfLib.SvgImage(
+                svg: hosp,
+                height: 20,
+                width: 20,
+              ),
+              pdfLib.Text(
+                paciente,
+              ),
+            ],
+          ),
+          pdfLib.Row(
+            children: [
+              pdfLib.SvgImage(
+                svg: hosp,
+                height: 20,
+                width: 20,
+              ),
+              pdfLib.Text(
+                remedio,
+              ),
+            ],
+          ),
+          pdfLib.Row(
+            children: [
+              pdfLib.SvgImage(
+                svg: hosp,
+                height: 20,
+                width: 20,
+              ),
+              pdfLib.Text(
+                dias,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
 
     final String dir = (await getApplicationDocumentsDirectory()).path;
 
