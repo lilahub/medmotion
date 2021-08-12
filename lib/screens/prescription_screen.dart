@@ -20,7 +20,7 @@ class Receitas extends StatelessWidget {
           body: Container(
             width: MediaQuery.of(context).size.width,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 PrescripButton(
                   text: "Nova Receita",
