@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hive/hive.dart';
+import 'package:intl/intl.dart';
 import 'package:medmotion/components/checkbox_day.dart';
 import 'package:medmotion/components/selected_time.dart';
 import 'package:pdf/widgets.dart' as pdfLib;
@@ -319,9 +321,7 @@ class _NewPrescriptionState extends State<NewPrescription> {
     var med = await rootBundle.loadString('assets/doutor.svg');
     var pac = await rootBundle.loadString('assets/pessoa.svg');
     var rem = await rootBundle.loadString('assets/remedio.svg');
-    var calendar = await rootBundle.loadString('assets/calendario.svg');
-    var sol = await rootBundle.loadString('assets/sol.svg');
-    var lua = await rootBundle.loadString('assets/lua.svg');
+    // var calendar = await rootBundle.loadString('assets/calendario.svg');
     var days = dias
         .where((dia) => dia["isSelected"] as bool)
         .map((dia) => dia["label"]);
@@ -417,12 +417,20 @@ class _NewPrescriptionState extends State<NewPrescription> {
 
     final String dir = (await getApplicationDocumentsDirectory()).path;
 
-    path = '$dir/pdfExample.pdf';
+    path =
+        '$dir/$medico - Receita ${DateFormat("", "pt_BR").add_yMd().format(DateTime.now()).replaceAll("/", "-")}.pdf';
     final File file = File(path);
     var pdfFile = await pdf.save();
     await file.writeAsBytes(pdfFile);
+    var id = DateTime.now().microsecondsSinceEpoch.toString();
+    await Hive.box("receitas").put(id, {
+      "id": id,
+      "name":
+          "$medico - Receita ${DateFormat("", "pt_BR").add_yMd().format(DateTime.now())}",
+      "pdf": path,
+    });
 
-    Navigator.of(context).push(MaterialPageRoute(
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => ViewPdf(
               file: file,
               path: path,

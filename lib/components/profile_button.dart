@@ -50,10 +50,10 @@ class ProfileButton extends StatelessWidget {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        Icon(
+                        /*Icon(
                           Icons.arrow_forward_ios,
                           color: Color(0xFF1E53BD),
-                        ),
+                        ),*/
                       ],
                     ),
                   )

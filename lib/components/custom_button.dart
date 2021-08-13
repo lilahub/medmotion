@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   final label;
   final onPressed;
+  final onLongPress;
 
   CustomButton({
     Key key,
     @required this.label,
     @required this.onPressed,
+    this.onLongPress,
   }) : super(key: key);
 
   @override
@@ -18,6 +20,7 @@ class CustomButton extends StatelessWidget {
         children: [
           Expanded(
             child: TextButton(
+              onLongPress: onLongPress,
               onPressed: onPressed,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
