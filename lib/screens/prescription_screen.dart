@@ -84,8 +84,8 @@ class Receitas extends StatelessWidget {
                   }),
             ),
             PrescripButton(
-              text: "Nova Receita",
-              widthButton: MediaQuery.of(context).size.width * 0.5,
+              text: "Escrever nova receita",
+              widthButton: MediaQuery.of(context).size.width * 0.6,
               nextScreen: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => NewPrescription())),
             ),

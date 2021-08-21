@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SelectedTime extends StatefulWidget {
   List<String> hours = [];
@@ -17,8 +18,12 @@ class _SelectedTimeState extends State<SelectedTime> {
       children: [
         Row(
           children: [
+            SvgPicture.asset(
+              "assets/clock.svg",
+              width: 35,
+            ),
             Text(
-              "Selecione o(s) horário(s):",
+              "   Selecione o(s) horário(s):",
               style: TextStyle(),
             ),
             Spacer(),
@@ -97,7 +102,7 @@ class _SelectedTimeState extends State<SelectedTime> {
                     ),
                   ),
                   child: Text(
-                    selectedTime ?? "Horário",
+                    selectedTime ?? "Horário*",
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.grey[700],

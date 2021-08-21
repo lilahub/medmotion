@@ -43,7 +43,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Video'),
+        backgroundColor: Color(0xFF1E53BD),
+        title: Text('Clique no play para traduzir'),
       ),
       // Use a FutureBuilder to display a loading spinner while waiting for the
       // VideoPlayerController to finish initializing.
@@ -65,6 +66,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           }
         },
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Wrap the play or pause in a call to `setState`. This ensures the
